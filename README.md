@@ -1,6 +1,6 @@
 # 3D Conversion
 
-This repository contains some code for converting 3d object files from [OBJ] format to [glTF] files. The reason for doing this was that [sul-embed](https://github.com/sul-dlss/sul-embed) had been using ([virtex3d]) for viewing the OBJ files, and is no longer being maintained. The viewer that was selected to move to ([model-viewer]) only works with glTF files. We are specifically going to be converting to `glb`, which is the compressed binary version of glTF files. 
+This repository contains some code for converting 3d object files from [OBJ] format to [glTF] files. The reason for doing this was that [sul-embed](https://github.com/sul-dlss/sul-embed) had been using [virtex3d] for viewing the OBJ files, and it is no longer being maintained. [model-viewer] was selected as a replacement, but it only works with glTF files. So we need to update SDR 3D objects to include a `glb` file, which is the compressed binary version of glTF files. 
 
 To convert the SDR 3D objects Argo was used to create a report of 3d objects that have been accessioned, and then save the druids as text file `druids.txt`. Then to export the objects using [SDRGET] and transfer the data here to the `bags` directory.
 
