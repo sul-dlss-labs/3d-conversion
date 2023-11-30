@@ -41,6 +41,10 @@ There were also some `.obj` files that referenced material files incorrectly (.m
 
 Since there didn't seem to be a reliable pattern for these errors the .obj files, and the files were present, the .obj files were manually updated to point to the correct .mtl file. These 
 
+## Accessioning
+
+Preassembly was used to add the new 3D GLTF files to the SDR. The existing `structural.csv` metadata was updated using a Python program (update_structural.py) which uses Pandas to selectively update and add to the table. This modified table is written to `output/file_manifest.csv` and a `output/manifest.csv` was used to map the druids to folder locations, for use with Preassembly. The entire `output` directory was transferred to Preassembly using Globus. The resulting discovery report can be found at https://sul-preassembly-prod.stanford.edu/job_runs/11863. 
+
 [OBJ]: https://en.wikipedia.org/wiki/Wavefront_.obj_file
 [glTF]: https://en.wikipedia.org/wiki/GlTF
 [virtex3d]: https://github.com/edsilv/virtex
